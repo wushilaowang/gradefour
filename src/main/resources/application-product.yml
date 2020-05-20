@@ -1,0 +1,5 @@
+spring:
+  profiles: product
+
+server:
+  port: 80

@@ -1,0 +1,4 @@
+spring:
+  profiles: develop
+server:
+  port: 8089
