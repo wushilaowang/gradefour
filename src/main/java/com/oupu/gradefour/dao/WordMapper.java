@@ -5,7 +5,8 @@ import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
-@Mapper
+//@Mapper
 public interface WordMapper {
-    List<Word> getWord();
+    List<Word> getWord(int page, int pageSize);
+    Integer addWord(List list);
 }

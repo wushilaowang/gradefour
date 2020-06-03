@@ -2,6 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.oupu.gradefour.dao.WordMapper">
     <select id="getWord" resultType="Word">
-        SELECT * FROM wordlist limit 1, 10
+        SELECT id, word, paraphrase FROM wordlist limit #{page}, #{pageSize}
     </select>
+    <insert id="addWord">
+        insert into wordlist (word, paraphrase, property) values
+        <foreach item="item" collection="list" separator=",">
+            (#{item.word}, #{item.paraphrase}, #{item.property})
+        </foreach>
+    </insert>
 </mapper>

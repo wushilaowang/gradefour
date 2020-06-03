@@ -3,18 +3,19 @@ spring:
   profiles:
     active: develop
   datasource:
-    #Êı¾İÔ´
-    name: test
+    #æ•°æ®æº
     url: jdbc:mysql://39.97.214.57:3306/gradefour?serverTimezone=GMT%2b8
     username: root
     password: 123456
     driverClassName: com.mysql.cj.jdbc.Driver
 
 mybatis:
-  #mapper.xmlÂ·¾¶
+  #mapper.xmlè·¯å¾„
   mapper-locations: classpath:/mapper/*.xml
-  #ÊµÌåÀàÂ·¾¶mapperÖĞ¿ÉÒÔ²»ÓÃĞ´È«Â·¾¶
+  #mapperä¸­resultTypeå¯ä»¥åªå†™ç±»å
   type-aliases-package: com.oupu.gradefour.entity
-  configuration:
-    default-statement-timeout: 30
+  #æ§åˆ¶å°æ‰“å°mybatis sql
+logging:
+   level:
+    com.oupu.gradefour.dao: debug
 

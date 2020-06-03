@@ -4,6 +4,15 @@ public class Word {
     private Integer id;
     private String word;
     private String paraphrase;
+    private String property;
+
+    public String getProperty() {
+        return property;
+    }
+
+    public void setProperty(String property) {
+        this.property = property;
+    }
 
     public Word() {
 
